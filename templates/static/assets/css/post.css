@@ -41,3 +41,9 @@
 .post .actions .action:hover {
     background-color: rgba(255, 255, 255, .05);
 }
+
+.btn-create-post {
+    padding: .5rem 1rem;
+    width: auto;
+    margin: 0;
+}

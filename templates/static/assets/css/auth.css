@@ -1,0 +1,9 @@
+.authentication {
+    max-width: 500px;
+    margin: 3rem auto;
+}
+
+.authentication button:hover {
+    background-color: #03a9f4;
+    color: black;
+}

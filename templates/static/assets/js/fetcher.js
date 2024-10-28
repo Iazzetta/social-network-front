@@ -15,7 +15,7 @@ export const Fetcher = async (configFetch) => {
     if (r.status == 200) {
         return response
     } else {
-        console.log('fail: ' + response)
+        alert(response.detail)
     }
 
 }

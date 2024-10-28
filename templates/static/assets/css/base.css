@@ -1,0 +1,65 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+.mb { margin-bottom: 1rem; }
+.mr { margin-right: 1rem; }
+.ml { margin-left: 1rem; }
+.mt { margin-top: 1rem; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+.rounded { border-radius: 1rem; }
+
+main {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 .5em;
+}
+
+form {
+    padding: 1rem 3rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 20px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    color: white;
+}
+textarea {
+    border: none;
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 30px;
+    font-size: 20px;
+    border: 2px solid #03A9F4;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 2rem;
+    color: #03a9f4;
+    transition: all .2s;
+}
+
+.card {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #ffffff47;
+    border-radius: 1rem;
+}

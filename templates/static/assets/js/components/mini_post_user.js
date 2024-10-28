@@ -10,7 +10,7 @@ export const MiniPostUser = async (post) => {
     return `
         <a class="mini-user" href="#">
             <div class="avatar">
-                <img src="assets/images/default_avatar.webp" width="35px" />
+                <img src="/static/assets/images/default_avatar.webp" width="35px" />
             </div>
             <div class="info">
                 <div>${user.name}</div>
