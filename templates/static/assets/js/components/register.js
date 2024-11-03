@@ -31,6 +31,8 @@ export const Register = async () => {
 
         localStorage.setItem('__token', response.token)
 
+        window.location.href = '/'
+
     })
 
     return component;

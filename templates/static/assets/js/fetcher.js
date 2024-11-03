@@ -1,5 +1,19 @@
-// const BASE_API = "http://localhost:8000"
-const BASE_API = "https://api.xera.com.br"
+const BASE_API = "http://localhost:8000"
+// const BASE_API = "https://api.xera.com.br"
+
+export const CachedFetcher = async (configFetch) => {
+
+    const cachedResult = localStorage.getItem(`${configFetch.cache.key}-${configFetch.cache.id}`)
+    if (cachedResult) {
+        return JSON.parse(cachedResult)
+    }
+
+    const response = await Fetcher(configFetch);
+
+    localStorage.setItem(`${configFetch.cache.key}-${configFetch.cache.id}`, JSON.stringify(response))
+
+    return response
+}
 
 export const Fetcher = async (configFetch) => {
     const r = await fetch(BASE_API + configFetch.url, {
@@ -15,6 +29,8 @@ export const Fetcher = async (configFetch) => {
 
     if (r.status == 200) {
         return response
+    } else if (r.status == 401) {
+        window.location.href = '/login'
     } else {
         alert(response.detail)
     }

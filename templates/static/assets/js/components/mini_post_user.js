@@ -1,10 +1,11 @@
-import { Fetcher } from "../fetcher.js"
+import { CachedFetcher } from "../fetcher.js"
 
 export const MiniPostUser = async (post) => {
 
-    const user = await Fetcher({
+    const user = await CachedFetcher({
         url: `/users/get-mini-user/${post.user_id}`,
-        method: 'GET'
+        method: 'GET',
+        cache: {key: 'mini-user', id: post.user_id}
     })
 
     return `

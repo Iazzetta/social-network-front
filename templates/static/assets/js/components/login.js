@@ -29,6 +29,8 @@ export const Login = async () => {
         })
 
         localStorage.setItem('__token', response.token)
+
+        window.location.href = '/'
     })
 
     return component;
