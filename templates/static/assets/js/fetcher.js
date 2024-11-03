@@ -1,5 +1,5 @@
-const BASE_API = "http://localhost:8000"
-// const BASE_API = "https://api.xera.com.br"
+// const BASE_API = "http://localhost:8000"
+const BASE_API = "https://api.xera.com.br"
 
 export const CachedFetcher = async (configFetch) => {
 
